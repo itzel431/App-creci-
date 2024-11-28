@@ -1,0 +1,31 @@
+{
+    "expo": {
+      "name": "Creci",
+      "slug": "creci_frontend",
+      "platforms": ["ios", "android", "web"],
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/n.jpg",
+      "splash": {
+        "image": "./assets/n.jpg",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "bundleIdentifier": "com.creci.app",
+        "buildNumber": "1.0.0"
+      },
+      "android": {
+        "package": "com.creci.app",
+        "versionCode": 1
+      }
+    }
+  }
+  
+  
