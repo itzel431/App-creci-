@@ -1,45 +1,46 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// Importa todas las pantallas que has creado
+import PantallaLogin from './pantallas/PantallaLogin';
+import PantallaRegistro from './pantallas/PantallaRegistro';
+import PantallaPrincipal from './pantallas/PantallaPrincipal';
+import PantallaPerfil from './pantallas/PantallaPerfil';
+import PantallaLactancia from './pantallas/PantallaLactancia';
+import PantallaMomentos from './pantallas/PantallaMomentos';
+import PantallaSalud from './pantallas/PantallaSalud';
+import PantallaCrecimiento from './pantallas/PantallaCrecimiento';
+import PantallaDiario from './pantallas/PantallaDiario';
+import PantallaAgenda from './pantallas/PantallaAgenda';
+import PantallaGuias from './pantallas/PantallaGuias';
+import PantallaConsejos from './pantallas/PantallaConsejos';
+import PantallaCalendario from './pantallas/PantallaCalendario';
+import PantallaContactos from './pantallas/PantallaContactos';
+import PantallaConsejosPreventivos from './pantallas/PantallaConsejosPreventivos';
 
-import PantallaLogin from './src/pantallas/PantallaLogin';
-import PantallaRegistro from './src/pantallas/PantallaRegistro';
-import PantallaPrincipal from './src/pantallas/PantallaPrincipal';
-import PantallaLactancia from './src/pantallas/PantallaLactancia';
-import PantallaMomentos from './src/pantallas/PantallaMomentos';
-import PantallaSalud from './src/pantallas/PantallaSalud';
-import PantallaCrecimiento from './src/pantallas/PantallaCrecimiento';
-import PantallaDiario from './src/pantallas/PantallaDiario';
-import PantallaAgenda from './src/pantallas/PantallaAgenda';
-import PantallaGuias from './src/pantallas/PantallaGuias';
-import PantallaConsejos from './src/pantallas/PantallaConsejos';
-import PantallaCalendario from './src/pantallas/PantallaCalendario';
-import PantallaContactos from './src/pantallas/PantallaContactos';
-import PantallaConsejosPreventivos from './src/pantallas/PantallaConsejosPreventivos';
-
-const Stack = createStackNavigator();
-
-const Navigation = () => {
+const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="PantallaLogin">
-        <Stack.Screen name="PantallaLogin" component={PantallaLogin} />
-        <Stack.Screen name="PantallaRegistro" component={PantallaRegistro} />
-        <Stack.Screen name="PantallaPrincipal" component={PantallaPrincipal} />
-        <Stack.Screen name="PantallaLactancia" component={PantallaLactancia} />
-        <Stack.Screen name="PantallaMomentos" component={PantallaMomentos} />
-        <Stack.Screen name="PantallaSalud" component={PantallaSalud} />
-        <Stack.Screen name="PantallaCrecimiento" component={PantallaCrecimiento} />
-        <Stack.Screen name="PantallaDiario" component={PantallaDiario} />
-        <Stack.Screen name="PantallaAgenda" component={PantallaAgenda} />
-        <Stack.Screen name="PantallaGuias" component={PantallaGuias} />
-        <Stack.Screen name="PantallaConsejos" component={PantallaConsejos} />
-        <Stack.Screen name="PantallaCalendario" component={PantallaCalendario} />
-        <Stack.Screen name="PantallaContactos" component={PantallaContactos} />
-        <Stack.Screen name="PantallaConsejosPreventivos" component={PantallaConsejosPreventivos} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={PantallaLogin} />
+          <Route path="/registro" component={PantallaRegistro} />
+          <Route path="/principal" component={PantallaPrincipal} />
+          <Route path="/perfil" component={PantallaPerfil} />
+          <Route path="/lactancia" component={PantallaLactancia} />
+          <Route path="/momentos" component={PantallaMomentos} />
+          <Route path="/salud" component={PantallaSalud} />
+          <Route path="/crecimiento" component={PantallaCrecimiento} />
+          <Route path="/diario" component={PantallaDiario} />
+          <Route path="/agenda" component={PantallaAgenda} />
+          <Route path="/guias" component={PantallaGuias} />
+          <Route path="/consejos" component={PantallaConsejos} />
+          <Route path="/calendario" component={PantallaCalendario} />
+          <Route path="/contactos" component={PantallaContactos} />
+          <Route path="/consejos-preventivos" component={PantallaConsejosPreventivos} />
+        </Switch>
+      </div>
+    </Router>
   );
 };
 
-export default Navigation;
+export default App;
