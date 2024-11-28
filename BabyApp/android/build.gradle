@@ -1,1 +1,27 @@
-classpath 'com.google.gms:google-services:4.3.15'  // Verifica que sea la última versión
+apply plugin: 'com.android.application'
+
+android {
+    ...
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.google.firebase:firebase-auth:21.0.5'  // Para Firebase Authentication
+    // Otras dependencias...
+}
+
+apply plugin: 'com.google.gms.google-services'  // Este es el plugin que activa Firebase
+
+
+// build.gradle dentro de la carpeta 'android' de tu proyecto (BabyApp/android/build.gradle)
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.google.gms:google-services:4.3.3' // Esto es para integrar Firebase
+    }
+}

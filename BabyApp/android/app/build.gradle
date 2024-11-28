@@ -1,0 +1,33 @@
+// build.gradle dentro de la carpeta 'app' de tu proyecto Android (BabyApp/android/app/build.gradle)
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.babyapp" // Asegúrate de poner el ID de tu aplicación aquí.
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Configuración de Firebase y otros servicios
+    dependencies {
+        implementation 'com.facebook.react:react-native:+'
+        implementation 'com.google.firebase:firebase-analytics'  // Agrega esta línea si quieres usar Firebase Analytics
+        implementation 'com.google.android.gms:play-services-auth:20.0.1' // Para autenticar con Google
+        implementation platform('com.google.firebase:firebase-bom:30.0.1') // Esta es la versión BOM de Firebase (que incluye todos los servicios de Firebase)
+    }
+}
+
+// Aplica el plugin de Google Services al final de tu archivo
+apply plugin: 'com.google.gms.google-services'
