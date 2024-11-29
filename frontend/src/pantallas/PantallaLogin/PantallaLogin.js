@@ -99,6 +99,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
+    borderWidth: 1,  // Agregado borde para pruebas
+    borderColor: 'red',  // Color visible del borde
   },
   button: {
     width: '100%',

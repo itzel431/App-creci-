@@ -1,0 +1,32 @@
+{
+    "expo": {
+      "name": "Creci",
+      "slug": "creci",
+      "platforms": ["ios", "android"],
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",  
+      "splash": {
+        "image": "./assets/splash.png",  
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "bundleIdentifier": "com.tuempresa.creci",
+        "buildNumber": "1"
+      },
+      "android": {
+        "package": "com.tuempresa.creci",
+        "versionCode": 1
+      },
+      "description": "Una app para el cuidado infantil.",
+      "githubUrl": "https://github.com/itzel431/creci"  
+    }
+  }
+  
