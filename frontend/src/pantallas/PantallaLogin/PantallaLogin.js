@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
-// Componente de pantalla de login
 const PantallaLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,19 +14,19 @@ const PantallaLogin = () => {
   };
 
   const googleLoginHandler = () => {
-    // Aquí iría el proceso de login con Google (implementación futura)
     Alert.alert('Google Login', 'Login con Google pendiente');
   };
 
   return (
     <View style={styles.container}>
-      {/* Logo o nombre de la app */}
-      <View style={styles.logoContainer}>
+      {/* Aquí comentamos la imagen */}
+      {/* <View style={styles.logoContainer}>
         <Image source={require('../assets/logo.png')} style={styles.logo} />
         <Text style={styles.title}>Bienvenido a Creci</Text>
-      </View>
+      </View> */}
 
-      {/* Campo de correo */}
+      <Text style={styles.title}>Bienvenido a Creci</Text>
+
       <TextInput
         style={styles.input}
         placeholder="Correo electrónico"
@@ -36,7 +35,6 @@ const PantallaLogin = () => {
         keyboardType="email-address"
       />
 
-      {/* Campo de contraseña */}
       <TextInput
         style={styles.input}
         placeholder="Contraseña"
@@ -45,12 +43,10 @@ const PantallaLogin = () => {
         secureTextEntry
       />
 
-      {/* Botón de login */}
       <TouchableOpacity style={styles.button} onPress={loginHandler}>
         <Text style={styles.buttonText}>Iniciar sesión</Text>
       </TouchableOpacity>
 
-      {/* Botones para login con Google o crear cuenta */}
       <View style={styles.extraContainer}>
         <TouchableOpacity style={styles.googleButton} onPress={googleLoginHandler}>
           <Text style={styles.buttonText}>Iniciar sesión con Google</Text>
@@ -66,26 +62,17 @@ const PantallaLogin = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fef2f2', // Color pastel suave
+    backgroundColor: '#fef2f2',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
-  logoContainer: {
-    alignItems: 'center',
-    marginBottom: 40,
-  },
-  logo: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    marginBottom: 20,
-  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#FF8A80', // Color tierno y suave
+    color: '#FF8A80',
     fontFamily: 'sans-serif-light',
+    marginBottom: 20,
   },
   input: {
     width: '100%',
@@ -99,13 +86,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    borderWidth: 1,  // Agregado borde para pruebas
-    borderColor: 'red',  // Color visible del borde
   },
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#FF4081', // Rosa fuerte
+    backgroundColor: '#FF4081',
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
@@ -124,7 +109,7 @@ const styles = StyleSheet.create({
   googleButton: {
     width: '100%',
     height: 50,
-    backgroundColor: '#4285F4', // Azul Google
+    backgroundColor: '#4285F4',
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
