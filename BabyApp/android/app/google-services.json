@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "275115341742",
+      "project_id": "antisecuestro-app",
+      "storage_bucket": "antisecuestro-app.firebasestorage.app"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:275115341742:android:0f505673c4a7d3ebd9fa3f",
+          "android_client_info": {
+            "package_name": "App.creci"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "275115341742-9ivnmfuvbrsoa1mm04ctktt1clkuiq3e.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDx9tzG4rUQ0Xov5eomK_h3YgW1XqskL9s"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "275115341742-9ivnmfuvbrsoa1mm04ctktt1clkuiq3e.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
